@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--加载静态资源-->
+    <mvc:default-servlet-handler/>
+    <!--<mvc:resources mapping="/js/" location="/js/**"/>-->
+    <!--<mvc:resources mapping="/css/" location="/css/**"/>-->
+    <!--<mvc:resources mapping="/fonts/" location="/fonts/**"/>-->
+    <!--<mvc:resources mapping="/images/" location="/img/**"/>-->
+
+    <!--开启注解-->
+    <mvc:annotation-driven/>
+
+    <!--组件扫描-->
+    <context:component-scan base-package="com.controller" />
+
+    <!-- 配置视图解析器 -->
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--&lt;!&ndash; 前缀 &ndash;&gt;-->
+        <!--<property name="prefix" value="/views/" />-->
+        <!--&lt;!&ndash; 后缀 &ndash;&gt;-->
+        <!--<property name="suffix" value=".jsp" />-->
+    <!--</bean>-->
+</beans>
